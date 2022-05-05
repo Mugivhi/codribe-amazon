@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        login
+    </title>
+    <link rel="stylesheet"  href="style.css"
+</head>
+<body>
+    <center>
+        <h2>Login</h2>
+        <form class="frm" name="login" action="login.html" onsubmit="return validateFORM();" method="post">
+            <table>
+                <tr>
+                    <td>
+                       <h3> username:</h3>
+                    </td>
+                    <td>
+                        <input id="username" type="text" name="user" value="username">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Password:</h3>
+                    </td>
+                    <td>
+                        <input id="password" type="password" name="password" value="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="index.html">
+                        <input type="button" class="submit" name="submit" value="Login" onclick="validate()">
+                    </a>
+                        <h2>not yet a member?</h2><a href="register.html">register</a>
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+    </center>
+    <script>
+        function validate(){
+            var username=document.getElementById("username").value;
+            var password=document.getElementById("password").value;
+            if(username=="tedd" && password=="1234"){
+                alert("login successful");
+                widnow.location.href="index.html";
+                return true;
+            }
+            else{
+                alert("login failed");
+                window.location.href="login.html";
+                return false;
+            }
+        }
+
+    </script>
+</body>
